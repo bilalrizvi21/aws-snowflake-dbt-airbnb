@@ -76,6 +76,14 @@ Integrity: Every booking links to a valid listing.
 Custom Logic: Specific tests to catch data anomalies in source files.
 
 
+
+1. **[Custom Pricing Tag Macro](./aws_dbt_snowflake_project/macros/tag.sql)** Implements business logic to categorize listings into 'Low', 'Medium', and 'High' price buckets.
+
+2. **[Metadata-Driven OBT](./aws_dbt_snowflake_project/models/gold/obt.sql)** Uses Jinja loops and configuration lists to dynamically join Silver layers into a denormalized analytics table.
+
+3. **[SCD Type 2 Snapshots](./aws_dbt_snowflake_project/snapshots/)** Tracks historical changes for `hosts` `bookings` and `listings` using dbt snapshots to maintain data integrity over time.
+
+
 📈 How to Run This Project
 
 Clone the repo: git clone <https://github.com/bilalrizvi21/aws-snowflake-dbt-airbnb>
