@@ -66,24 +66,6 @@ Integrity: Every booking links to a valid listing.
 
 Custom Logic: Specific tests to catch data anomalies in source files.
 
-📁 Project Structure
-
-aws_dbt_snowflake_project/
-├── models/
-
-│   ├── bronze/      # Raw ingestion
-
-│   ├── silver/      # Cleaning & Standardization
-
-│   └── gold/        # OBT & Fact tables
-
-├── macros/          # Custom logic (Price tagging, trimming)
-
-├── snapshots/       # Historical tracking (SCD Type 2)
-
-├── tests/           # Data quality assertions
-
-└── dbt_project.yml  # Project configuration
 
 📈 How to Run This Project
 
